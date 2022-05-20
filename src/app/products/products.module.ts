@@ -9,11 +9,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 @NgModule({
   declarations: [
-    ProductsListComponent
+    ProductsListComponent,
+    ProductDetailsComponent
   ],
   imports: [
     CommonModule,

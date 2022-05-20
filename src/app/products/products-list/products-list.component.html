@@ -11,7 +11,7 @@
         <mat-card-content class="dashboard-card-content">
           <div>Price: {{product.price}}</div>
           <div>Category: {{product.category}}</div>
-          <button mat-raised-button color="primary">View Details</button>
+          <button mat-raised-button color="primary" [routerLink]="['product-details', product.id]">View Details</button>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>

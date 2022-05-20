@@ -14,7 +14,7 @@ export class ProductsListComponent implements OnInit{
   ngOnInit():void {
     fetch('https://fakestoreapi.com/products?limit=10')
       .then(res=>res.json())
-      .then(json=> {this.products = json;  console.log(this.products)} )
+      .then(json=> this.products = json )
   }
   // cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
   //   map(({ matches }) => {

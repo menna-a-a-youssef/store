@@ -1,0 +1,12 @@
+<mat-card *ngIf="product">
+  <mat-card-header>
+    <mat-card-title>
+      {{product.title}}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div>Price: {{product.price}}</div>
+    <div>Category: {{product.category}}</div>
+    <div>Description: {{product.description}}</div>
+  </mat-card-content>
+</mat-card>
