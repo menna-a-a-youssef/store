@@ -1,0 +1,62 @@
+<form [formGroup]="addProductForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>Add New Product</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Product title" formControlName="title">
+            <mat-error *ngIf="addProductForm.controls['title'].hasError('required')">
+              Product title is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Product price" formControlName="price">
+            <mat-error *ngIf="addProductForm.controls['price'].hasError('required')">
+              Product price is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Product description" formControlName="description">
+            <mat-error *ngIf="addProductForm.controls['description'].hasError('required')">
+              Product description is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Product image URL" formControlName="image">
+            <mat-error *ngIf="addProductForm.controls['image'].hasError('required')">
+              Product image URL is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Product category" formControlName="category">
+            <mat-error *ngIf="addProductForm.controls['category'].hasError('required')">
+              Product category is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
